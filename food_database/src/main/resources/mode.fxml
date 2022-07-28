@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.ModeController">
+   <children>
+      <AnchorPane layoutX="-8.0" prefHeight="128.0" prefWidth="1305.0" style="-fx-background-color: #6a957e#6a957e;">
+         <children>
+            <Button layoutX="75.0" layoutY="29.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-radius: 10;" text="Back Main Page">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="modePane" layoutX="-3.0" layoutY="124.0" prefHeight="596.0" prefWidth="1291.0">
+         <children>
+            <ChoiceBox fx:id="mode" layoutX="255.0" layoutY="197.0" prefHeight="83.0" prefWidth="334.0" />
+            <Text layoutX="100.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Text>
+            <Button layoutX="195.0" layoutY="331.0" mnemonicParsing="false" onAction="#changeButton" prefHeight="71.0" prefWidth="252.0" text="Change">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Button>
+            <Text fx:id="current" layoutX="42.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your current mode is 'Normal'" wrappingWidth="695.4951171875">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Text>
+            <Text fx:id="modeMsg" fill="#b91616" layoutX="122.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Line endX="-90.0" endY="339.99993896484375" layoutX="798.0" layoutY="257.0" startX="-90.0" startY="-253.99996948242188" />
+            <AnchorPane fx:id="mealPane" layoutX="712.0" layoutY="2.0" prefHeight="595.0" prefWidth="573.0">
+               <children>
+                  <ChoiceBox fx:id="number" layoutX="128.0" layoutY="230.0" prefHeight="61.0" prefWidth="303.0" />
+                  <Text layoutX="126.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Meals">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="222.0" layoutY="342.0" mnemonicParsing="false" onAction="#setButton" text="Set">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="numberMsg" fill="#b91616" layoutX="98.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#6f6f6f" layoutX="70.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can set the number of meals from 1 to 7">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#6f6f6f" layoutX="71.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The default value is 1">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text layoutX="240.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

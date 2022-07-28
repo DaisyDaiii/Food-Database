@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.MainController">
+   <children>
+      <AnchorPane prefHeight="128.0" prefWidth="1287.0" style="-fx-background-color: #6a957e#6a957e;">
+         <children>
+            <Button fx:id="email" layoutX="447.0" layoutY="55.0" mnemonicParsing="false" onAction="#emailButton" style="-fx-background-radius: 10;" text="Send Email">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="641.0" layoutY="55.0" mnemonicParsing="false" onAction="#showButtonAction" style="-fx-background-radius: 10;" text="All added ingredients">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="965.0" layoutY="55.0" mnemonicParsing="false" onAction="#snapshotButton" style="-fx-background-radius: 10;" text="Screenshot">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="1161.0" layoutY="55.0" mnemonicParsing="false" onAction="#aboutButton" style="-fx-background-radius: 10;" text="About">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="160.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchPaneAction" style="-fx-background-radius: 10;" text="Search">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="food" layoutX="310.0" layoutY="55.0" mnemonicParsing="false" onAction="#foodButton" style="-fx-background-radius: 10;" text="Foods">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="25.0" layoutY="55.0" mnemonicParsing="false" onAction="#modeAction" style="-fx-background-radius: 10;" text="Mode">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Text fx:id="mode" fill="#681e1e" layoutX="147.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Mode: Normal">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="searchPane" layoutY="119.0" prefHeight="642.0" prefWidth="1298.0">
+         <children>
+            <Text layoutX="126.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can just search by keywords, or indicate a maximum for any given nutritional  of your ingredient" wrappingWidth="1067.1318359375">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="192.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keywords">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <TextField fx:id="keyword" layoutX="126.0" layoutY="279.0" prefHeight="67.0" prefWidth="308.0" />
+            <Text layoutX="638.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrients">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="nutrientsChoose" layoutX="825.0" layoutY="166.0" prefHeight="72.0" prefWidth="296.0" />
+            <Text layoutX="733.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <TextField fx:id="max" layoutX="824.0" layoutY="299.0" prefHeight="75.0" prefWidth="314.0" />
+            <Button layoutX="512.0" layoutY="470.0" mnemonicParsing="false" onAction="#searchKeyAction" text="Search">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <Text fx:id="searchError" fill="#d02323" layoutX="218.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="814.4979248046875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="about" layoutX="-4.0" layoutY="130.0" prefHeight="590.0" prefWidth="1283.0" visible="false">
+         <children>
+            <Text layoutX="66.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:  Food Nutrition">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text layoutX="64.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designer: Ying Dai (Daisy)">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text fill="#832626" layoutX="610.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reference">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input API:  https://developer.edamam.com/food-database-api" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="606.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output API:  https://sendgrid.com/solutions/email-api/" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="getRequest() method in Http : " wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#832626" layoutX="610.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citations">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="postRequest() method in Http :" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database's methods:" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citation: use the same structure in client class of task2 in this unit (SOFT3202), but changed for current usage" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citation: use the same structure in client class of task2 in this unit (SOFT3202), but changed for current usage" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="610.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citation: use the same structure in Database class of task3 in this unit (SOFT3202), but changed for current usage" wrappingWidth="584.6638793945312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="foodPane" layoutX="-1.0" layoutY="128.0" prefHeight="581.0" prefWidth="1284.0" visible="false">
+         <children>
+            <SplitPane fx:id="mainPane" dividerPositions="0.2486, 0.7" focusTraversable="true" layoutX="1.0" prefHeight="604.0" prefWidth="1283.0">
+               <items>
+                  <AnchorPane prefHeight="578.0" prefWidth="286.0">
+                     <children>
+                        <ListView fx:id="foodsList" layoutX="-1.0" layoutY="129.0" prefHeight="461.0" prefWidth="316.0" />
+                        <Button layoutX="20.0" layoutY="22.0" mnemonicParsing="false" onAction="#previousAction" text="Previous page">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="188.0" layoutY="23.0" mnemonicParsing="false" onAction="#nextAction" text="Next page">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Text fx:id="pageError" fill="#b91818" layoutX="22.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="264.99853515625">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane prefHeight="677.0" prefWidth="564.0">
+                     <content>
+                        <AnchorPane id="Content" fx:id="search" minHeight="-1.0" minWidth="-1.0" prefHeight="592.0" prefWidth="561.0">
+                           <children>
+                              <Text fx:id="error" fill="#dd1010" layoutX="25.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="501.76462174043127">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="108.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="63.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Measures">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="foodChoose" layoutX="203.0" layoutY="74.0" prefHeight="54.0" prefWidth="255.0" />
+                              <ChoiceBox fx:id="measureChoose" layoutX="209.0" layoutY="244.0" onMouseClicked="#measureAction" prefHeight="54.0" prefWidth="254.0" />
+                              <Button layoutX="195.0" layoutY="404.0" mnemonicParsing="false" onAction="#addAction" prefHeight="63.0" prefWidth="209.0" text="Add">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="quantity" layoutX="205.0" layoutY="155.0" prefHeight="61.0" prefWidth="254.0" />
+                              <Text layoutX="71.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="clearCache" layoutX="210.0" layoutY="481.0" mnemonicParsing="false" onAction="#clearButton" text="Clear Cache">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane prefHeight="578.0" prefWidth="273.0">
+                     <children>
+                        <ListView fx:id="nutrientsShow" layoutY="58.0" prefHeight="533.0" prefWidth="388.0" />
+                        <Text layoutX="29.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrients">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="173.0" layoutY="9.0" mnemonicParsing="false" onAction="#maxButtonAction" text="Show stacked bar ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="emailPane" layoutX="-3.0" layoutY="125.0" prefHeight="599.0" prefWidth="1285.0" visible="false">
+         <children>
+            <Text layoutX="436.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send a long form report">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiver Email">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <TextField fx:id="receiver" layoutX="522.0" layoutY="193.0" prefHeight="101.0" prefWidth="470.0" />
+            <Text fx:id="emailError" fill="#b20c0c" layoutX="448.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="642.1618041992188">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="541.0" layoutY="460.0" mnemonicParsing="false" onAction="#sendButton" text="Send">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addedPane" layoutX="-2.0" layoutY="126.0" prefHeight="593.0" prefWidth="1283.0" visible="false">
+         <children>
+            <Text layoutX="174.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These are all your added ingredients." wrappingWidth="362.2906188964844">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <ListView fx:id="showList" layoutX="674.0" layoutY="2.0" prefHeight="589.0" prefWidth="607.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="tipPane" layoutX="-1.0" layoutY="131.0" prefHeight="588.0" prefWidth="1284.0" visible="false">
+         <children>
+            <Text layoutX="267.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to search an ingredient first!">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <ButtonBar layoutX="130.0" layoutY="414.0" prefHeight="40.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="progress" layoutX="-1.0" layoutY="124.0" prefHeight="599.0" prefWidth="1284.0" visible="false">
+         <children>
+            <ProgressIndicator fx:id="indicator" layoutX="627.0" layoutY="214.0" maxHeight="100.0" maxWidth="100.0" prefHeight="169.0" prefWidth="200.0" progress="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
